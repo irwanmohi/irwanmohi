@@ -72,7 +72,7 @@ echo -e "y" | ufw enable
 apt install -y net-tools vnstat unzip curl screen
 
 # Install OpenVPN
-apt install -y openvpn
+apt install -y openvpn easy-rsa openssl
 wget -q "https://raw.githubusercontent.com/irwanmohi/irwanmohi/main/deb10/openvpn//EasyRSA-3.0.8.tgz"
 tar xvf EasyRSA-3.0.8.tgz
 rm EasyRSA-3.0.8.tgz
@@ -119,17 +119,17 @@ systemctl enable openvpn@server-udp
 systemctl enable openvpn@server-tcp
 
 # Configure OpenVPN client configuration
-mkdir -p /iriszz/openvpn
-wget -qO /iriszz/openvpn/client-udp.ovpn "https://raw.githubusercontent.com/irwanmohi/irwanmohi/main/deb10/openvpn//client-udp.ovpn"
-wget -qO /iriszz/openvpn/client-tcp.ovpn "https://raw.githubusercontent.com/irwanmohi/irwanmohi/main/deb10/openvpn//client-tcp.ovpn"
-sed -i "s/xx/$ip/g" /iriszz/openvpn/client-udp.ovpn
-sed -i "s/xx/$ip/g" /iriszz/openvpn/client-tcp.ovpn
-echo -e "\n<ca>" >> /iriszz/openvpn/client-tcp.ovpn
+mkdir -p /home/openvpn
+wget -qO /home/openvpn/client-udp.ovpn "https://raw.githubusercontent.com/irwanmohi/irwanmohi/main/deb10/openvpn//client-udp.ovpn"
+wget -qO /home/openvpn/client-tcp.ovpn "https://raw.githubusercontent.com/irwanmohi/irwanmohi/main/deb10/openvpn//client-tcp.ovpn"
+sed -i "s/xx/$ip/g" /home/openvpn/client-udp.ovpn
+sed -i "s/xx/$ip/g" /home/openvpn/client-tcp.ovpn
+echo -e "\n<ca>" >> /home/openvpn/client-tcp.ovpn
 cat "/etc/openvpn/key/ca.crt" >> /iriszz/openvpn/client-tcp.ovpn
-echo -e "</ca>" >> /iriszz/openvpn/client-tcp.ovpn
-echo -e "\n<ca>" >> /iriszz/openvpn/client-udp.ovpn
-cat "/etc/openvpn/key/ca.crt" >> /iriszz/openvpn/client-udp.ovpn
-echo -e "</ca>" >> /iriszz/openvpn/client-udp.ovpn
+echo -e "</ca>" >> /home/openvpn/client-tcp.ovpn
+echo -e "\n<ca>" >> /home/openvpn/client-udp.ovpn
+cat "/etc/openvpn/key/ca.crt" >> /home/openvpn/client-udp.ovpn
+echo -e "</ca>" >> /home/openvpn/client-udp.ovpn
 
 # Install OHP
 wget -qO /usr/bin/ohpserver "https://raw.githubusercontent.com/irwanmohi/irwanmohi/main/deb10/openvpn//ohpserver"
