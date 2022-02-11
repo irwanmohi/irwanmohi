@@ -78,15 +78,22 @@ tar xvf EasyRSA-3.0.8.tgz
 rm EasyRSA-3.0.8.tgz
 mv EasyRSA-3.0.8 /etc/openvpn/easy-rsa
 cp /etc/openvpn/easy-rsa/vars.example /etc/openvpn/easy-rsa/vars
+mv EasyRSA-3.0.8 /etc/openvpn/easy-rsa
+cp /etc/openvpn/easy-rsa/vars.example /etc/openvpn/easy-rsa/vars
 sed -i 's/#set_var EASYRSA_REQ_COUNTRY\t"US"/set_var EASYRSA_REQ_COUNTRY\t"MY"/g' /etc/openvpn/easy-rsa/vars
-sed -i 's/#set_var EASYRSA_REQ_PROVINCE\t"California"/set_var EASYRSA_REQ_PROVINCE\t"Kedah"/g' /etc/openvpn/easy-rsa/vars
-sed -i 's/#set_var EASYRSA_REQ_CITY\t"San Francisco"/set_var EASYRSA_REQ_CITY\t"Bandar Baharu"/g' /etc/openvpn/easy-rsa/vars
-sed -i 's/#set_var EASYRSA_REQ_ORG\t"Copyleft Certificate Co"/set_var EASYRSA_REQ_ORG\t\t"Void VPN"/g' /etc/openvpn/easy-rsa/vars
-sed -i 's/#set_var EASYRSA_REQ_EMAIL\t"me@example.net"/set_var EASYRSA_REQ_EMAIL\t"aiman.iriszz@gmail.com"/g' /etc/openvpn/easy-rsa/vars
-sed -i 's/#set_var EASYRSA_REQ_OU\t\t"My Organizational Unit"/set_var EASYRSA_REQ_OU\t\t"Void VPN Premium"/g' /etc/openvpn/easy-rsa/vars
+sed -i 's/#set_var EASYRSA_REQ_PROVINCE\t"California"/set_var EASYRSA_REQ_PROVINCE\t"Selangor"/g' /etc/openvpn/easy-rsa/vars
+sed -i 's/#set_var EASYRSA_REQ_CITY\t"San Francisco"/set_var EASYRSA_REQ_CITY\t"Gombak"/g' /etc/openvpn/easy-rsa/vars
+sed -i 's/#set_var EASYRSA_REQ_ORG\t"Copyleft Certificate Co"/set_var EASYRSA_REQ_ORG\t\t"Aidan Technology"/g' /etc/openvpn/easy-rsa/vars
+sed -i 's/#set_var EASYRSA_REQ_EMAIL\t"me@example.net"/set_var EASYRSA_REQ_EMAIL\t"irwan@aidan.my"/g' /etc/openvpn/easy-rsa/vars
+sed -i 's/#set_var EASYRSA_REQ_OU\t\t"My Organizational Unit"/set_var EASYRSA_REQ_OU\t\t"Aidan Staff Only"/g' /etc/openvpn/easy-rsa/vars
 sed -i 's/#set_var EASYRSA_CA_EXPIRE\t3650/set_var EASYRSA_CA_EXPIRE\t3650/g' /etc/openvpn/easy-rsa/vars
 sed -i 's/#set_var EASYRSA_CERT_EXPIRE\t825/set_var EASYRSA_CERT_EXPIRE\t3650/g' /etc/openvpn/easy-rsa/vars
-sed -i 's/#set_var EASYRSA_REQ_CN\t\t"ChangeMe"/set_var EASYRSA_REQ_CN\t\t"Void VPN"/g' /etc/openvpn/easy-rsa/vars
+sed -i 's/#set_var EASYRSA_REQ_CN\t\t"ChangeMe"/set_var EASYRSA_REQ_CN\t\t"Aidan VPN"/g' /etc/openvpn/easy-rsa/vars
+cd /etc/openvpn/easy-rsa
+./easyrsa --batch init-pki
+./easyrsa --batch build-ca nopass
+./easyrsa gen-dh
+./easyrsa build-server-full server nopass
 cd /etc/openvpn/easy-rsa
 ./easyrsa --batch init-pki
 ./easyrsa --batch build-ca nopass
