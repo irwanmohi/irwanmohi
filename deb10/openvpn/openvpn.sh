@@ -71,15 +71,9 @@ echo -e "y" | ufw enable
 # Install tools
 apt install -y net-tools vnstat unzip curl screen
 
-# Configure SSH
-echo -e "AllowUsers root" >> /etc/ssh/sshd_config
-wget -qO /etc/issue.net "https://raw.githubusercontent.com/iriszz-official/autoscript/main/FILES/issue.net"
-sed -i "s/#Banner none/Banner \/etc\/issue.net/g" /etc/ssh/sshd_config
-service ssh restart
-
 # Install OpenVPN
 apt install -y openvpn
-wget -q "https://raw.githubusercontent.com/iriszz-official/autoscript/main/FILES/openvpn/EasyRSA-3.0.8.tgz"
+wget -q "https://raw.githubusercontent.com/irwanmohi/irwanmohi/main/deb10/openvpn//EasyRSA-3.0.8.tgz"
 tar xvf EasyRSA-3.0.8.tgz
 rm EasyRSA-3.0.8.tgz
 mv EasyRSA-3.0.8 /etc/openvpn/easy-rsa
@@ -104,8 +98,8 @@ cp /etc/openvpn/easy-rsa/pki/issued/server.crt /etc/openvpn/key/
 cp /etc/openvpn/easy-rsa/pki/ca.crt /etc/openvpn/key/
 cp /etc/openvpn/easy-rsa/pki/dh.pem /etc/openvpn/key/
 cp /etc/openvpn/easy-rsa/pki/private/server.key /etc/openvpn/key/
-wget -qO /etc/openvpn/server-udp.conf "https://raw.githubusercontent.com/iriszz-official/autoscript/main/FILES/openvpn/server-udp.conf"
-wget -qO /etc/openvpn/server-tcp.conf "https://raw.githubusercontent.com/iriszz-official/autoscript/main/FILES/openvpn/server-tcp.conf"
+wget -qO /etc/openvpn/server-udp.conf "https://raw.githubusercontent.com/irwanmohi/irwanmohi/main/deb10/openvpn//server-udp.conf"
+wget -qO /etc/openvpn/server-tcp.conf "https://raw.githubusercontent.com/irwanmohi/irwanmohi/main/deb10/openvpn//server-tcp.conf"
 sed -i "s/#AUTOSTART="all"/AUTOSTART="all"/g" /etc/default/openvpn
 echo -e "net.ipv4.ip_forward = 1" >> /etc/sysctl.conf
 sysctl -p
@@ -126,8 +120,8 @@ systemctl enable openvpn@server-tcp
 
 # Configure OpenVPN client configuration
 mkdir -p /iriszz/openvpn
-wget -qO /iriszz/openvpn/client-udp.ovpn "https://raw.githubusercontent.com/iriszz-official/autoscript/main/FILES/openvpn/client-udp.ovpn"
-wget -qO /iriszz/openvpn/client-tcp.ovpn "https://raw.githubusercontent.com/iriszz-official/autoscript/main/FILES/openvpn/client-tcp.ovpn"
+wget -qO /iriszz/openvpn/client-udp.ovpn "https://raw.githubusercontent.com/irwanmohi/irwanmohi/main/deb10/openvpn//client-udp.ovpn"
+wget -qO /iriszz/openvpn/client-tcp.ovpn "https://raw.githubusercontent.com/irwanmohi/irwanmohi/main/deb10/openvpn//client-tcp.ovpn"
 sed -i "s/xx/$ip/g" /iriszz/openvpn/client-udp.ovpn
 sed -i "s/xx/$ip/g" /iriszz/openvpn/client-tcp.ovpn
 echo -e "\n<ca>" >> /iriszz/openvpn/client-tcp.ovpn
@@ -138,52 +132,13 @@ cat "/etc/openvpn/key/ca.crt" >> /iriszz/openvpn/client-udp.ovpn
 echo -e "</ca>" >> /iriszz/openvpn/client-udp.ovpn
 
 # Install OHP
-wget -qO /usr/bin/ohpserver "https://raw.githubusercontent.com/iriszz-official/autoscript/main/FILES/ohpserver"
+wget -qO /usr/bin/ohpserver "https://raw.githubusercontent.com/irwanmohi/irwanmohi/main/deb10/openvpn//ohpserver"
 chmod +x /usr/bin/ohpserver
 screen -AmdS ohp-dropbear ohpserver -port 3128 -proxy 127.0.0.1:8080 -tunnel 127.0.0.1:85
 screen -AmdS ohp-openvpn ohpserver -port 8000 -proxy 127.0.0.1:8080 -tunnel 127.0.0.1:1194
 
-# Install BadVPN UDPGw
-cd
-apt install -y cmake
-wget -qO badvpn.zip "https://raw.githubusercontent.com/iriszz-official/autoscript/main/FILES/badvpn.zip"
-unzip badvpn.zip
-cd badvpn-master
-mkdir build-badvpn
-cd build-badvpn
-cmake .. -DBUILD_NOTHING_BY_DEFAULT=1 -DBUILD_UDPGW=1
-make install
-cd
-rm -r badvpn-master
-rm badvpn.zip
-screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300
-
-# Install Dropbear
-apt install -y dropbear
-sed -i "s/NO_START=1/NO_START=0/g" /etc/default/dropbear
-sed -i "s/DROPBEAR_PORT=22/DROPBEAR_PORT=85/g" /etc/default/dropbear
-echo -e "/bin/false" >> /etc/shells
-wget -qO /etc/dropbear_issue.net "https://raw.githubusercontent.com/iriszz-official/autoscript/main/FILES/dropbear_issue.net"
-sed -i 's|DROPBEAR_BANNER=""|DROPBEAR_BANNER="/etc/dropbear_issue.net"|g' /etc/default/dropbear
-service dropbear restart
-
-# Install Stunnel
-apt install -y stunnel4
-sed -i "s/ENABLED=0/ENABLED=1/g" /etc/default/stunnel4
-openssl req -new -newkey rsa:2048 -days 3650 -nodes -x509 -sha256 -subj "/CN=Iriszz/emailAddress=aiman.iriszz@gmail.com/O=Void VPN/OU=Void VPN Premium/C=MY" -keyout /etc/stunnel/stunnel.pem -out /etc/stunnel/stunnel.pem
-wget -qO /etc/stunnel/stunnel.conf "https://raw.githubusercontent.com/iriszz-official/autoscript/main/FILES/stunnel.conf"
-service stunnel4 restart
-
-# Install Squid3
-apt install -y squid3
-wget -qO /etc/squid/squid.conf "https://raw.githubusercontent.com/iriszz-official/autoscript/main/FILES/squid.conf"
-sed -i "s/xx/$domain/g" /etc/squid/squid.conf
-sed -i "s/ip/$ip/g" /etc/squid/squid.conf
-service squid restart
-
-# xml parser
-cd
-apt-get install -y libxml-parser-perl
+# Install menu
+wget -qO /usr/bin/menu "https://raw.githubusercontent.com/iriszz-official/autoscript/main/FILES/menu/menu.sh"
 wget -qO /usr/bin/ssh-vpn-script "https://raw.githubusercontent.com/iriszz-official/autoscript/main/FILES/menu/ssh-vpn-script.sh"
 
 # Cleanup and reboot
