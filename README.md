@@ -52,6 +52,7 @@ I'm continually deepening my expertise in IT infrastructure and systems administ
 ![Apache](https://img.shields.io/badge/Apache-D22128?style=flat&logo=apache&logoColor=white)
 ![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat&logo=nginx&logoColor=white)
 ![cPanel](https://img.shields.io/badge/cPanel_%2F_WHM-FF6C2C?style=flat&logo=cpanel&logoColor=white)
+![Virtualmin](https://img.shields.io/badge/Virtualmin-587CAA?style=flat)
 &nbsp; <i>Web hosting administration</i>
 
 **Database**
@@ -64,6 +65,8 @@ I'm continually deepening my expertise in IT infrastructure and systems administ
 
 ![DNS](https://img.shields.io/badge/DNS_Management-4285F4?style=flat&logo=googledomains&logoColor=white)
 ![SSL](https://img.shields.io/badge/SSL%2FTLS_Certificates-721412?style=flat&logo=letsencrypt&logoColor=white)
+![WireGuard](https://img.shields.io/badge/WireGuard-88171A?style=flat&logo=wireguard&logoColor=white)
+![OpenVPN](https://img.shields.io/badge/OpenVPN-EA7E20?style=flat&logo=openvpn&logoColor=white)
 &nbsp; <i>Domain configuration · network troubleshooting</i>
 
 **Cloud &amp; Productivity**
@@ -75,6 +78,7 @@ I'm continually deepening my expertise in IT infrastructure and systems administ
 **Automation**
 
 ![Bash](https://img.shields.io/badge/Bash_Scripting-4EAA25?style=flat&logo=gnubash&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![Cron](https://img.shields.io/badge/Cron_Jobs-1E1E1E?style=flat&logo=linux&logoColor=white)
 &nbsp; <i>Server maintenance automation</i>
 
