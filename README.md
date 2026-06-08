@@ -82,4 +82,4 @@ I'm a hands-on systems administrator and IT consultant focused on **Linux server
 - ▶️ YouTube — [@irwanmohi](https://www.youtube.com/@irwanmohi)
 - 📘 Facebook — [irwanmohi](https://www.facebook.com/irwanmohi)
 - 🐦 X / Twitter — [@irwanmohi](https://twitter.com/irwanmohi)
-- ✍️ Blog — [infosec-openmic.blogspot.com](https://infosec-openmic.blogspot.com/)
+- ✍️ Blog — [irwan.aidan.work](https://irwan.aidan.work/)
