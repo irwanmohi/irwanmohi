@@ -30,7 +30,7 @@ I'm a hands-on systems administrator and IT consultant focused on **Linux server
 - 🔐 **Security &amp; compliance hardening** against industry benchmarks (e.g. CIS)
 - ⚙️ **DevOps troubleshooting** across web hosting control panels and containerized stacks
 - 🛡️ Exploring **exploit development, networking, and security research** (and writing about it)
-- 📝 I write about infosec at [infosec-openmic.blogspot.com](https://infosec-openmic.blogspot.com/)
+- 📝 I write about infosec at [irwan.aidan.work](https://irwan.aidan.work/)
 - 🗣️ Bilingual technical communication — **Bahasa Malaysia &amp; English**
 
 ---
