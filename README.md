@@ -1,11 +1,14 @@
 <h1 align="center">Hi there, I'm Mohd Irwan 👋</h1>
 
 <p align="center">
-  <b>System Administrator · Linux · Web Hosting · Network &amp; Infrastructure</b><br>
+  <b>Server Manager · Linux Infrastructure Engineer</b><br>
   Kuala Lumpur, Malaysia 🇲🇾
 </p>
 
 <p align="center">
+  <a href="https://irwanmohi.work.gd">
+    <img src="https://img.shields.io/badge/Portfolio-2F81F7?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio">
+  </a>
   <a href="https://www.linkedin.com/in/mohd-irwan-mohi-534898a7/">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
   </a>
@@ -18,22 +21,36 @@
   <a href="https://twitter.com/irwanmohi">
     <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="X">
   </a>
-  <a href="https://irwanmohi.work.gd">
-    <img src="https://img.shields.io/badge/Portfolio-2F81F7?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio">
-  </a>
 </p>
 
 ---
 
 ## 👨‍💻 About Me
 
-I'm a **Server Manager and Linux Infrastructure Engineer** who keeps production Linux estates online. Day to day, I maintain web applications, troubleshoot server and performance issues, and administer databases — while managing the critical-but-unglamorous layer of **DNS, SSL, backups, and uptime** that keeps everything online.
+I keep production Linux estates online. Right now that means around **32 servers behind 16
+public-sector and enterprise portals**: load balancers, paired web nodes, database hosts and shared
+storage, all administered through Virtualmin.
 
-I currently look after around 32 servers behind 16 public-sector and enterprise portals, and I am studying for a BSc in Computer Science alongside the work. My portfolio is at [irwanmohi.work.gd](https://irwanmohi.work.gd).
+The work runs from building a platform to recovering one. Hardening, migrations, monitoring,
+incident response, and the backup plan you hope you never have to run. When something breaks in
+production, escalation stops with me.
 
-- 🐧 Production **Linux** administration and incident response
-- 🔐 Server reliability, backups, and security hardening
-- 🗣️ Bilingual technical communication — **Bahasa Malaysia &amp; English**
+I have 19+ years in enterprise IT operations and I am studying for a BSc in Computer Science
+alongside the job. Full detail is at **[irwanmohi.work.gd](https://irwanmohi.work.gd)**.
+
+- 🐧 Production Linux administration and incident response
+- 🔐 WAF, firewall and OS hardening, plus backup and disaster recovery
+- 🗣️ Bilingual technical documentation in Bahasa Malaysia and English
+
+---
+
+## 🔧 What I'm Building
+
+| Project | What it is |
+|---|---|
+| **[modsecurity](https://github.com/irwanmohi/modsecurity)** | A Webmin module in Perl that makes ModSecurity triage practical: blocked requests grouped by rule and domain, one-click per-domain exclusions, OWASP CRS tuning, and config backups with rollback. Runs on Debian/Ubuntu and RHEL-family. |
+| **[vpn-project](https://github.com/irwanmohi/vpn-project)** | Automated WireGuard access management. Users self-register and get a config and QR code; admins get live peer stats, connection logs and a geolocation map. Flask, MySQL, nginx. |
+| **[portfolio](https://github.com/irwanmohi/portfolio)** | My portfolio, built to look like a server monitoring dashboard rather than a CV. Vanilla JS, no framework, no build step. |
 
 ---
 
@@ -41,73 +58,80 @@ I currently look after around 32 servers behind 16 public-sector and enterprise 
 
 **Operating Systems**
 
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=flat&logo=ubuntu&logoColor=white)
-![CentOS](https://img.shields.io/badge/CentOS-262577?style=flat&logo=centos&logoColor=white)
+![RHEL](https://img.shields.io/badge/RHEL-EE0000?style=flat&logo=redhat&logoColor=white)
 ![AlmaLinux](https://img.shields.io/badge/AlmaLinux-000000?style=flat&logo=almalinux&logoColor=white)
+![Debian](https://img.shields.io/badge/Debian-A81D33?style=flat&logo=debian&logoColor=white)
 ![Windows Server](https://img.shields.io/badge/Windows_Server-0078D6?style=flat&logo=windows&logoColor=white)
 
-**Web &amp; Hosting**
+**Web, Hosting and High Availability**
 
+![Virtualmin](https://img.shields.io/badge/Virtualmin_%2F_Webmin-587CAA?style=flat)
 ![Apache](https://img.shields.io/badge/Apache-D22128?style=flat&logo=apache&logoColor=white)
 ![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat&logo=nginx&logoColor=white)
+![HAProxy](https://img.shields.io/badge/HAProxy-106DA9?style=flat&logo=haproxy&logoColor=white)
+![PHP-FPM](https://img.shields.io/badge/PHP--FPM-777BB4?style=flat&logo=php&logoColor=white)
 ![cPanel](https://img.shields.io/badge/cPanel_%2F_WHM-FF6C2C?style=flat&logo=cpanel&logoColor=white)
-![Virtualmin](https://img.shields.io/badge/Virtualmin-587CAA?style=flat)
-&nbsp; <i>Web hosting administration</i>
+![NFS](https://img.shields.io/badge/NFS-333333?style=flat&logo=linux&logoColor=white)
 
-**Database**
+**Databases**
 
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
 ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=flat&logo=mariadb&logoColor=white)
-&nbsp; <i>SQL query optimization · backup &amp; recovery</i>
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat&logo=redis&logoColor=white)
+&nbsp; <i>Backups and verified restores · query and connection tuning · zero-downtime credential rotation</i>
+
+**Security**
+
+![ModSecurity](https://img.shields.io/badge/ModSecurity-1F6FEB?style=flat&logo=modx&logoColor=white)
+![OWASP CRS](https://img.shields.io/badge/OWASP_CRS-000000?style=flat&logo=owasp&logoColor=white)
+![CSF](https://img.shields.io/badge/CSF_%2F_ufw-4B275F?style=flat&logo=linuxfoundation&logoColor=white)
+![SSL](https://img.shields.io/badge/SSL%2FTLS-721412?style=flat&logo=letsencrypt&logoColor=white)
+![SSH](https://img.shields.io/badge/SSH_Hardening-000000?style=flat&logo=openssh&logoColor=white)
+&nbsp; <i>CVE remediation · log forensics · incident response</i>
 
 **Networking**
 
-![DNS](https://img.shields.io/badge/DNS_Management-4285F4?style=flat&logo=googledomains&logoColor=white)
-![SSL](https://img.shields.io/badge/SSL%2FTLS_Certificates-721412?style=flat&logo=letsencrypt&logoColor=white)
+![DNS](https://img.shields.io/badge/BIND_%2F_DNS-4285F4?style=flat&logo=googledomains&logoColor=white)
+![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=flat&logo=cloudflare&logoColor=white)
 ![WireGuard](https://img.shields.io/badge/WireGuard-88171A?style=flat&logo=wireguard&logoColor=white)
 ![OpenVPN](https://img.shields.io/badge/OpenVPN-EA7E20?style=flat&logo=openvpn&logoColor=white)
-&nbsp; <i>Domain configuration · network troubleshooting</i>
+![nftables](https://img.shields.io/badge/iptables_%2F_nftables-EE0000?style=flat&logo=linux&logoColor=white)
 
-**Cloud &amp; Productivity**
+**Cloud and Virtualisation**
 
-![Microsoft 365](https://img.shields.io/badge/Microsoft_365-D83B01?style=flat&logo=microsoftoffice&logoColor=white)
-![Teams](https://img.shields.io/badge/Microsoft_Teams-6264A7?style=flat&logo=microsoftteams&logoColor=white)
-![Google Workspace](https://img.shields.io/badge/Google_Workspace-4285F4?style=flat&logo=google&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazonwebservices&logoColor=white)
+![DigitalOcean](https://img.shields.io/badge/DigitalOcean-0080FF?style=flat&logo=digitalocean&logoColor=white)
+![VMware](https://img.shields.io/badge/VMware-607078?style=flat&logo=vmware&logoColor=white)
+&nbsp; <i>VPS provisioning · server migration and cutover planning</i>
 
 **Automation**
 
-![Bash](https://img.shields.io/badge/Bash_Scripting-4EAA25?style=flat&logo=gnubash&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnubash&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![Cron](https://img.shields.io/badge/Cron_Jobs-1E1E1E?style=flat&logo=linux&logoColor=white)
-&nbsp; <i>Server maintenance automation</i>
+![Perl](https://img.shields.io/badge/Perl-39457E?style=flat&logo=perl&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
+&nbsp; <i>cron · systemd timers · runbooks written so someone else can run them</i>
 
 ---
 
-## 🌱 Current Interests
+## 🎯 Working On Next
 
-- Linux system administration
-- Infrastructure management
-- Server security
-- Web hosting technologies
-- Database administration
-- IT automation
+- RHCSA and LFCS certification
+- Tightening WAF rule tuning so admin paths can move from detection to enforcing
+- Off-site backup and restore drills across the estate
 
 ---
 
-## 📊 GitHub
+## 📫 Get In Touch
+
+- 🌐 Portfolio — [irwanmohi.work.gd](https://irwanmohi.work.gd)
+- 💼 LinkedIn — [mohd-irwan-mohi](https://www.linkedin.com/in/mohd-irwan-mohi-534898a7/)
+- 💬 WhatsApp — username `irwanmohi`
+- ▶️ YouTube — [@irwanmohi](https://www.youtube.com/@irwanmohi)
+- 🐦 X / Twitter — [@irwanmohi](https://twitter.com/irwanmohi)
+- 📘 Facebook — [irwanmohi](https://www.facebook.com/irwanmohi)
 
 <p align="center">
   <img src="https://img.shields.io/github/followers/irwanmohi?style=flat&logo=github&label=Followers&color=181717" alt="GitHub Followers">
-  <img src="https://img.shields.io/badge/Portfolio-irwanmohi.work.gd-2F81F7?style=flat&logo=googlechrome&logoColor=white" alt="Portfolio">
 </p>
-
----
-
-## 📫 Connect With Me
-
-- 💼 LinkedIn — [mohd-irwan-mohi](https://www.linkedin.com/in/mohd-irwan-mohi-534898a7/)
-- ▶️ YouTube — [@irwanmohi](https://www.youtube.com/@irwanmohi)
-- 📘 Facebook — [irwanmohi](https://www.facebook.com/irwanmohi)
-- 🐦 X / Twitter — [@irwanmohi](https://twitter.com/irwanmohi)
-- 🌐 Portfolio — [irwanmohi.work.gd](https://irwanmohi.work.gd)
