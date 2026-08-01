@@ -83,11 +83,11 @@ alongside the job. Full detail is at **[irwanmohi.work.gd](https://irwanmohi.wor
 
 **Security**
 
-![ModSecurity](https://img.shields.io/badge/ModSecurity-1F6FEB?style=flat&logo=modx&logoColor=white)
+![ModSecurity](https://img.shields.io/badge/ModSecurity-1F6FEB?style=flat)
 ![OWASP CRS](https://img.shields.io/badge/OWASP_CRS-000000?style=flat&logo=owasp&logoColor=white)
 ![CSF](https://img.shields.io/badge/CSF_%2F_ufw-4B275F?style=flat&logo=linuxfoundation&logoColor=white)
 ![SSL](https://img.shields.io/badge/SSL%2FTLS-721412?style=flat&logo=letsencrypt&logoColor=white)
-![SSH](https://img.shields.io/badge/SSH_Hardening-000000?style=flat&logo=openssh&logoColor=white)
+![SSH](https://img.shields.io/badge/SSH_Hardening-000000?style=flat)
 &nbsp; <i>CVE remediation · log forensics · incident response</i>
 
 **Networking**
@@ -100,7 +100,7 @@ alongside the job. Full detail is at **[irwanmohi.work.gd](https://irwanmohi.wor
 
 **Cloud and Virtualisation**
 
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazonwebservices&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat)
 ![DigitalOcean](https://img.shields.io/badge/DigitalOcean-0080FF?style=flat&logo=digitalocean&logoColor=white)
 ![VMware](https://img.shields.io/badge/VMware-607078?style=flat&logo=vmware&logoColor=white)
 &nbsp; <i>VPS provisioning · server migration and cutover planning</i>
