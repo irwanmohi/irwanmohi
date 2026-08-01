@@ -18,8 +18,8 @@
   <a href="https://twitter.com/irwanmohi">
     <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="X">
   </a>
-  <a href="https://irwan.aidan.work">
-    <img src="https://img.shields.io/badge/Blog-FF5722?style=for-the-badge&logo=rss&logoColor=white" alt="Blog">
+  <a href="https://irwanmohi.work.gd">
+    <img src="https://img.shields.io/badge/Portfolio-2F81F7?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio">
   </a>
 </p>
 
@@ -27,9 +27,9 @@
 
 ## 👨‍💻 About Me
 
-I'm a **System Administrator** who keeps Linux servers, web hosting environments, and network services running reliably in production. Day to day, I maintain web applications, troubleshoot server and performance issues, and administer databases — while managing the critical-but-unglamorous layer of **DNS, SSL, backups, and uptime** that keeps everything online.
+I'm a **Server Manager and Linux Infrastructure Engineer** who keeps production Linux estates online. Day to day, I maintain web applications, troubleshoot server and performance issues, and administer databases — while managing the critical-but-unglamorous layer of **DNS, SSL, backups, and uptime** that keeps everything online.
 
-I'm continually deepening my expertise in IT infrastructure and systems administration through both hands-on operations and ongoing study, and I write about infosec at [irwan.aidan.work](https://irwan.aidan.work).
+I currently look after around 32 servers behind 16 public-sector and enterprise portals, and I am studying for a BSc in Computer Science alongside the work. My portfolio is at [irwanmohi.work.gd](https://irwanmohi.work.gd).
 
 - 🐧 Production **Linux** administration and incident response
 - 🔐 Server reliability, backups, and security hardening
@@ -99,7 +99,7 @@ I'm continually deepening my expertise in IT infrastructure and systems administ
 
 <p align="center">
   <img src="https://img.shields.io/github/followers/irwanmohi?style=flat&logo=github&label=Followers&color=181717" alt="GitHub Followers">
-  <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2Firwanmohi&query=%24.public_repos&style=flat&logo=github&label=Public%20Repos&color=181717" alt="Public Repos">
+  <img src="https://img.shields.io/badge/Portfolio-irwanmohi.work.gd-2F81F7?style=flat&logo=googlechrome&logoColor=white" alt="Portfolio">
 </p>
 
 ---
@@ -110,4 +110,4 @@ I'm continually deepening my expertise in IT infrastructure and systems administ
 - ▶️ YouTube — [@irwanmohi](https://www.youtube.com/@irwanmohi)
 - 📘 Facebook — [irwanmohi](https://www.facebook.com/irwanmohi)
 - 🐦 X / Twitter — [@irwanmohi](https://twitter.com/irwanmohi)
-- ✍️ Blog — [irwan.aidan.work](https://irwan.aidan.work)
+- 🌐 Portfolio — [irwanmohi.work.gd](https://irwanmohi.work.gd)
